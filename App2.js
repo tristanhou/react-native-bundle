@@ -12,15 +12,16 @@ import {Platform, StyleSheet, Text, View, Button} from 'react-native';
 const instructions = 'index.bundle 引入了 index2.bundle 证明可以按需加载一个 bundle 文件作为组件使用';
 
 export default class TextModule extends Component {
+    
     render() {
       let buz1GlobalParam = global.index1Param;
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>{'index2.bundle'}</Text>
                 <Text style={styles.instructions}> {instructions} </Text>
-                <Button title={'按钮'}></Button>
+                <Button title={'按钮'} ></Button>
             </View>
-        );
+        )
     }
 }
 const styles = StyleSheet.create({

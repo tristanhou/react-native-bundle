@@ -1,11 +1,15 @@
 const koa = require('koa');
 const app = new koa();
+const mongoose = require('mongoose');
 const koabody = require('koa-body');
 const router = require('koa-router')();
 const send = require('koa-send');
+
 // const router = new Router();
 const fs = require('fs');
 const cors =require('koa2-cors');
+
+mongoose.connect('mongodb://127.0.0.1:27017/blockly',{ useNewUrlParser: true })
 app.use(koabody({
 	multipart: true,
 	formidable: {
@@ -34,7 +38,8 @@ router.post('/upload', async(ctx, next) => {
 	debugger
  console.log('kill');
  const file = ctx.request.files.file; // 获取上传文件
- const reader = fs.createReadStream(file.path); // 创建可读流
+ const reader = fs.create
+ ReadStream(file.path); // 创建可读流
  const ext = file.name.split('.').pop(); // 获取上传文件扩展名
  const name = `${Math.random().toString()}.${ext}`
  const upStream = fs.createWriteStream(`uploads/${name}`); // 创建可写流
@@ -57,6 +62,16 @@ router.get('/download/:name', async (ctx) => {
 })
 
 app.use(router.routes());   /*启动路由*/
+// const Cat = mongoose.model('Cat', { name: String })
+
+// app.use(async () => {
+//     // 实例化一个实体对象
+//     const kitty = new Cat({ name: 'Zildjian' })
+//     // 执行插入操作
+//     const res = await kitty.save()
+//     // 打印返回结果
+//     console.log(res)
+// })
 app.listen(3000, () => {
 	console.log('you application is running localhost:3000')
 })

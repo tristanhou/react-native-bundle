@@ -31,7 +31,7 @@ const argv = process.argv.splice(2)[0]
 const fs = require('fs')
 const path = require('path')
 const basePath = path.join(__dirname, '/')
-const readFIles = [`${basePath}tmpl/index.js`, `${basePath}tmpl/cptTemp.js`];  
+const readFiles = [`${basePath}tmpl/index.js`, `${basePath}tmpl/cptTemp.js`];  
 console.log(basePath)
 const pathFile = argv.split('/')
 let exists = function () {
@@ -47,10 +47,21 @@ let exists = function () {
 }
 let readFile = function () {
     return new Promise(resolve => {
+        // 遍历需要读取的模板数据
+        for(let p in readFiles)
         let content = fs.readFileSync(readFIles[0]).toString()
         let repContent = content.replace(/App/g, 'banana')
         console.log(repContent)
         resolve(repContent)
+    })
+}
+let writeFile = function (file) {
+    return new Promise((resolve, reject) => {
+        (async function () {
+            for (let p of writes) {
+                await fs.watchFile(`${basePath}${a}`, )
+            }
+        })()
     })
 }
 readFile()

@@ -3,45 +3,27 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-<<<<<<< HEAD
         android:layout_margin="40dp"
         android:text="这个页面时还是原生页面，只加载了基础的jsbundle到内存中，点击以下按钮分别进入拆分后的 bundle 文件中"
-=======
-        android:layout_margin="20dp"
-        android:text="这个页面时还是原生页面，只加载了基础的jsbundle到内存中，点击以下两个按钮分别进入到react native业务1和2"
->>>>>>> a62560c21895f539dc7d8eed4bda60635c2920d9
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <Button
         android:id="@+id/btn_go_buz1"
-<<<<<<< HEAD
         android:text="index.bundle"
-=======
-        android:text="进入RN业务1"
->>>>>>> a62560c21895f539dc7d8eed4bda60635c2920d9
         android:layout_gravity="center"
         android:layout_margin="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-    android:layout_height="wrap_content" />
     <Button
         android:id="@+id/btn_go_buz2"
-<<<<<<< HEAD
         android:text="index2.bundle"
-=======
-        android:text="进入RN业务2"
->>>>>>> a62560c21895f539dc7d8eed4bda60635c2920d9
         android:layout_gravity="center"
         android:layout_margin="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <Button
         android:id="@+id/btn_go_buz3"
-<<<<<<< HEAD
         android:text="index3.bundle"
-=======
-        android:text="进入RN业务3"
->>>>>>> a62560c21895f539dc7d8eed4bda60635c2920d9
         android:layout_gravity="center"
         android:layout_margin="20dp"
         android:layout_width="wrap_content"
