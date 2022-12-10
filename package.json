@@ -10,7 +10,7 @@
     "index2": "node ./node_modules/react-native/local-cli/cli.js bundle --platform android --dev false --entry-file index2.js --bundle-output ./android/app/src/main/assets/index2.android.bundle --assets-dest android/app/src/main/res/ --config /reactNative/react-native-multibundler/buz57.config.js"
   },
   "dependencies": {
-    "express": "^4.17.0",
+    "express": "^4.17.3",
     "koa": "^2.7.0",
     "koa-body": "^4.1.0",
     "koa-router": "^7.4.0",
